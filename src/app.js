@@ -6,8 +6,9 @@ app.get('/', (req, res) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
-module.exports = app;
+// Export the server for testing
+module.exports = { app, server };
